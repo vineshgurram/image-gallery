@@ -47,10 +47,10 @@
     margin-top: 10px;
 }
 
-.category-btn .btn {
-    background-color: #000;
-    font-weight: 500;
-    letter-spacing: 1.5px;
+.category-btn .btn.active {
+    color: #000;
+    outline: 2px solid #000;
+    background-color: #fff;
 }
 
 .category-btn .btn {
@@ -59,9 +59,12 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    /* background-color: #000; */
     color: #fff;
     letter-spacing: 1px;
+    background-color: #000;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    margin-right: 10px;
 }
 
 .overlay {
@@ -72,40 +75,32 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.7);
     overflow: hidden;
-    /* display: flex; */
-    align-items: center;
-    justify-content: center;
     display: none;
     width: 100%;
     height: 100vh;
     z-index: 1;
 }
 
-.overlay.active{
-    display: flex;
+.overlay.active {
+    display: block;
 }
 
 .modal {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    z-index: 1;
+    width: auto;
+    height: 100vh;
+    transform: translate(50%, 0%);
+    display: none;
+    align-items: center;
+    justify-content: center;
     text-align: center;
 }
 
-.modal.active{
+.modal.active {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 1;
-    width: 60%;
-    height: 60vh;
-}
-
-.inner-modal{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
 }
 
 .modal-img img {
@@ -119,7 +114,7 @@
     font-size: 22px;
     line-height: 1.5;
     color: #fff;
-    margin: 10px;
+    margin-top: 50px;
     font-weight: 500;
 }
 
@@ -135,29 +130,29 @@
     background-color: transparent;
 }
 
-.image-box .image-caption{
+.image-box .image-caption {
     position: absolute;
     transform: translateY(10px);
     color: #fff;
 }
 
-.image-box{
+.image-box {
     position: relative;
     /* overflow: hidden; */
 }
 
-.image-box:hover.image-caption{
+.image-box:hover.image-caption {
     transform: translateY(0);
 }
 
-h1{
+h1 {
     font-size: 50px;
     line-height: 2;
     font-weight: 900;
     letter-spacing: 5px;
 }
 
-.category .grid{
+.category .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -169,20 +164,20 @@ h1{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
 
-.category img{
+.category img {
     height: 150px;
     width: 100%;
     object-fit: cover;
     object-position: bottom;
 }
 
-.category .title{
+.category .title {
     font-size: 30px;
     font-weight: 400;
     margin-top: 10px;
 }
 
-.show-more-btn{
+.show-more-btn {
     padding: 7px;
     font-size: 15px;
     border: none;
@@ -195,7 +190,7 @@ h1{
     margin: 0 auto;
 }
 
-.upload-img{
+.upload-img {
     background-color: transparent;
     border: none;
     position: fixed;
@@ -206,11 +201,11 @@ h1{
     border-radius: 100%;
 }
 
-.upload-img i{
+.upload-img i {
     font-size: 60px;
 }
 
-.upload-form{
+.upload-form {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -222,17 +217,18 @@ h1{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 8px;
     display: none;
+    z-index: 12;
 }
 
-.upload-form.active{
+.upload-form.active {
     display: block;
 }
 
-.upload-form .input-box{
+.upload-form .input-box {
     margin-bottom: 20px;
 }
 
-.upload-form .input-box input{
+.upload-form .input-box input {
     display: block;
     width: 100%;
     padding: 5px 10px;
@@ -241,21 +237,21 @@ h1{
 
 .upload-form .input-box:last-child {
     margin-bottom: 0;
-    
+
 }
 
-.upload-form h2{
+.upload-form h2 {
     font-size: 25px;
     text-align: center;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
-.upload-form button{
+.upload-form button {
     font-size: 16px;
     letter-spacing: 1px;
     font-weight: 700;
-    padding: 10px 15px ;
+    padding: 10px 15px;
     border: none;
     background-color: #000;
     color: #fff;
@@ -273,7 +269,7 @@ h1{
     display: none;
 } */
 
-.overlay-1.active{
+.overlay-1.active {
     display: block;
 }
 
@@ -285,6 +281,13 @@ h1{
     display: block;
 } */
 
+footer {
+    background-color: #000;
+    color: #F5F7F8;
+    text-align: center;
+    padding: 20px;
+}
+
 
 @media screen and (max-width:1279px) {
     .image-box-wrap {
@@ -292,13 +295,13 @@ h1{
     }
 }
 
-@media screen and (max-width:1023px){
-    .upload-img i{
+@media screen and (max-width:1023px) {
+    .upload-img i {
         font-size: 50px;
 
     }
 
-    .upload-img{
+    .upload-img {
         bottom: 30px;
         right: 30px;
     }
@@ -307,7 +310,8 @@ h1{
         font-size: 20px;
     }
 
-    .upload-form .input-box input,.upload-form button{
+    .upload-form .input-box input,
+    .upload-form button {
         font-size: 14px;
     }
 }
@@ -317,8 +321,18 @@ h1{
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .upload-form{
+    .upload-form {
         width: 90%;
+    }
+
+    h1 {
+        font-size: 35px;
+        line-height: 1.5;
+    }
+
+    .category-btn .btn {
+        margin-right: 5px;
+        margin-bottom: 5px;
     }
 
 }

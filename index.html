@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,19 +15,22 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Image Gallery</title>
 </head>
+
 <body>
+    <!-- HEADER  -->
     <header class="header">
         <div class="container">
             <h1>
-                GALLERY
+                mYIMAGE GALLERY
                 <span>
                     <i class="fa-solid fa-image"></i></i>
                 </span>
             </h1>
         </div>
     </header>
+    <!-- MAIN  -->
     <main class="main">
-        <section class="category-btn">
+        <section class="section category-btn">
             <div class="container">
                 <button class="btn all-category-btn">All</button>
                 <button class="btn nature-category-btn">Nature</button>
@@ -49,50 +53,56 @@
                 </div>
             </div> -->
         </section>
-        <section class="">
+        <section class="section">
             <div class="container">
                 <div class="image-box-wrap">
 
                 </div>
             </div>
-            <button class="btn show-more-btn">
+            <!-- <button class="btn show-more-btn">
                 Show More
+            </button> -->
+        </section>
+        <section class="section">
+            <div class="overlay">
+                <button class="btn close-btn">
+                    <i class="fa-regular fa-circle-xmark"></i>
+                </button>
+            </div>
+            <div class="modal">
+                <div class="inner-modal">
+                    <div class="modal-img">
+                        <img src="" alt="">
+                    </div>
+                    <h3 class="modal-caption">Image Caption</h3>
+                </div>
+            </div>
+            <button class="btn upload-img">
+                <i class="fa-solid fa-circle-plus"></i>
             </button>
+            <div class="upload-form">
+                <h2>Upload New Image</h2>
+                <form action="" id="form">
+                    <div class="input-box">
+                        <input type="text" placeholder="URL of Image" id="url" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Alternate Text of Image" id="alt" required>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" placeholder="Category for Image" id="category" required>
+                    </div>
+                    <div class="input-box">
+                        <button class="upload-btn" type="submit">Upload</button>
+                    </div>
+                </form>
+            </div>
         </section>
     </main>
-    <div class="overlay">
-    </div>
-    <div class="modal">
-        <div class="inner-modal">
-            <button class="btn close-btn">
-                <i class="fa-regular fa-circle-xmark"></i>
-            </button>
-            <div class="modal-img">
-                <img src="" alt="">
-            </div>
-            <h3 class="modal-caption">Image Caption</h3>
-        </div>
-    </div>
-    <button class="btn upload-img">
-        <i class="fa-solid fa-circle-plus"></i>
-    </button>
-    <div class="upload-form">
-        <h2>Upload New Image</h2>
-        <form action="" id="form">
-            <div class="input-box">
-                <input type="text" placeholder="URL of Image" id="url" required>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Alternate Text of Image" id="alt" required>
-            </div>
-            <div class="input-box">
-                <input type="text" placeholder="Category for Image" id="category" required>
-            </div>
-            <div class="input-box">
-                <button class="upload-btn" type="submit">Upload</button>
-            </div>
-        </form>
-    </div>
+    <!-- FOOTER  -->
+    <footer>
+        <p>&copy; 2023 mYImage Gallery App</p>
+    </footer>
     <script src="js/image.js"></script>
     <script src="js/script.js"></script>
 </body>
